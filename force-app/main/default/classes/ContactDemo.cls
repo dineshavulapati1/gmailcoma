@@ -1,3 +1,5 @@
+
+//Modified date 16/10/2022
 public class ContactDemo {
 	@AuraEnabled
     public static List<contact> getContact()
