@@ -1,0 +1,10 @@
+<aura:component controller = "CalcApex">
+    <aura:attribute name = "Firstnumber" type="integer"/>
+    <aura:attribute name = "Secondnumber" type="integer"/>
+    <aura:attribute name = "result" type="integer"/>
+    <ui:inputnumber label="First Number" aura:id="fnum" value = "{!v.Firstnumber}"/>
+    <ui:inputnumber label="Second Number" aura:id="snum" value = "{!v.Secondnumber}"/>
+    <lightning:button label="Submit" onclick="{!c.calc}"/>
+    <br/>
+    Result : {!v.result}
+</aura:component>

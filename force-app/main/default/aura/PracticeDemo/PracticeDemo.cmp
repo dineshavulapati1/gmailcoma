@@ -1,0 +1,14 @@
+<aura:component controller = "ContactDemo"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="Test" type="String" />
+	<aura:attribute name="columns" type="List" />	
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    
+    <div style="height: 300px">
+        <lightning:datatable
+                keyField="id"
+                data="{!v.Test }"
+                columns="{!v.columns }"
+                hideCheckboxColumn="true"/>
+    </div>
+</aura:component>

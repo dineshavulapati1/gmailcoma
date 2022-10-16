@@ -1,0 +1,18 @@
+<aura:component controller="InsertAccount"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="accountobj" type="account" default="{'sobjectType':'Account',
+                                                           'Name':'',
+                                                           'Phone':'',
+                                                           'BillingAddress':''}"/>
+    <aura:attribute name="recordid" type="String"/>
+	<div class="slds-p-around_medium">
+                <lightning:input label="Name" value = "{!v.accountobj.Name}"/>
+                <lightning:input label="Phone" value = "{!v.accountobj.Phone}"/>
+                <lightning:input label="BillingAddress" value = "{!v.accountobj.BillingAddress}"/>
+                <lightning:button type="submit" name="Submit" label="submit" class="slds-m-top_medium" onclick = "{!c.handleSubmit}"/>
+        </div>
+    <br/>
+    <div>
+    	Account record ID : {!v.recordid}
+    </div>
+</aura:component>
