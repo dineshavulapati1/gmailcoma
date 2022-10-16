@@ -1,3 +1,6 @@
+//Apex class is accCreateLocHelper
+//Date is 16/10/2022
+
 public class accCreateLocHelper {
     public static void createContacts(List<Account> acc){
         List<contact> con = new List<contact>();
